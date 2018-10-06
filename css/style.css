@@ -1,0 +1,25 @@
+/* General; CSS filen styr formateringen för labb 1 i HTML / CSS */
+	body {margin-top: 0%; background-color: white;}
+
+	/* Header */
+		#head_box {width: 100%; height: 10vh; background-color: darkblue; display: flex; flex-direction: row;}
+			header {flex-grow: 0.1; text-align: center; letter-spacing: 5px; font-size: 3em; padding-top: 1%; color: white;}
+			#navbar {width: 12%; margin-left: 2%; display: flex; flex-direction: row; padding-top: 2.2%;}
+				#navbar div {width: 40%;}
+
+			.linksTitle {color: white; font-size: 1em; text-decoration: none;}
+
+	/* Main contents */
+		main {display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-around; align-items: flex-end;}
+			img {margin: 20px; width: 300px;} /* Krav; ● The width of an image shsould not be less than 150 pixels. The images should have a margin
+of between 20 to 40 pixels to each other.*/
+			img:nth-last-child(1), img:nth-last-child(2) {flex-grow: 0.472;}
+
+	/* Media Query */
+		@media screen and (max-width: 700px)
+			{
+				#navbar {display: none;}
+				header {width: 100%; margin-top: 2%;}
+				img {margin: 20px; width: 200px;}
+				img:nth-last-child(1), img:nth-last-child(2) {flex-grow: 0;}
+			}
